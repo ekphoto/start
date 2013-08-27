@@ -5,11 +5,22 @@ Version: 2.6
 
 ## Contributors:
 
+
+
+Ed Kelley ( [@kelleypromedia] http://kelleypromedia.com) / [@edkelleyphotography](http://www.edkelleyphotography.com) / [mattbanks.me](http://www.mattbanks.me) )
+
+
+
+This was Forked from:
 Matt Banks ( [@mattbanks](http://twitter.com/mattbanks) / [kernelcreativemedia.com](http://www.kernelcreativemedia.com) / [mattbanks.me](http://www.mattbanks.me) )
 
 ## Summary
 
 WordPress Starter Theme for use as Child Theme of the Genesis Framework for building custom themes, using Compass/SCSS and Grunt. Tested with WordPress 3.6 and Genesis 2.0.0.
+Modifying to fit my requirements - still a lot of Matt code in project ( Thanks for all the hard work.
+
+
+The following is all from Matt:
 
 ## Usage
 
