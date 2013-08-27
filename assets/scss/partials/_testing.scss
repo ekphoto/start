@@ -1,0 +1,376 @@
+///////////////////////////////////////////////////////////////
+// Test Colors using   _test_gen.scss
+//
+// Genesis Colors
+$color01: #ffffff;
+$color02: #f5f5f5;
+$color03: #f15123;
+$color04: #eeeeee;
+$color05: #dddddd;
+$color06: #999999;
+$color07: #666666;
+$color08: #333333;
+////////////////////////////////////////////////////////////////
+// test new colors
+////////////////////////////////////////////////////////////////
+//$color01: #ffffff; // content and sidebar boxes
+//$color02: #f5f5f5; // background
+//$color03: #f15123;
+//$color04: #eeeeee;	// archive active
+//$color05: #dddddd;	// hover
+//$color06: #999999;	// menu text, footer text
+//$color07: #666666;	// text
+//$color08: #333333; 	//main color - menu, footer, titles. footer hover
+////////////////////////////////////////////////////////////////
+// test SASS
+////////////////////////////////////////////////////////////////
+//$sat: 80%;  // adds color
+//$color01: saturate( $color01, $sat ); 
+//$color02: saturate( $color02, $sat ); 
+//$color03: saturate( $color03, $sat ); 
+//$color04: saturate( $color04, $sat ); 
+//$color05: saturate( $color05, $sat ); 
+//$color06: saturate( $color06, $sat ); 
+//$color07: saturate( $color07, $sat ); 
+//$color08: saturate( $color08, $sat ); 
+
+//$tint: 30%; // adds white
+//$color01: tint( $color01, $tint );
+//$color02: tint( $color02, $tint );
+//$color03: tint( $color03, $tint );
+//$color04: tint( $color04, $tint );
+//$color05: tint( $color05, $tint );
+//$color06: tint( $color06, $tint );
+//$color07: tint( $color07, $tint );
+//$color08: tint( $color08, $tint );
+
+//$hue: 90%; // changes color every 30 degrees
+//$color01: adjust-hue( $color01, $hue );
+//$color02: adjust-hue( $color02, $hue );
+//$color03: adjust-hue( $color03, $hue );
+//$color04: adjust-hue( $color04, $hue );
+//$color05: adjust-hue( $color05, $hue );
+//$color06: adjust-hue( $color06, $hue );
+//$color07: adjust-hue( $color07, $hue );
+//$color08: adjust-hue( $color08, $hue );
+
+
+//$shade: 50%; // adds black
+//$color01: shade( $color01, $shade );
+//$color02: shade( $color02, $shade );
+//$color03: shade( $color03, $shade );
+//$color04: shade( $color04, $shade );
+//$color05: shade( $color05, $shade );
+//$color06: shade( $color06, $shade );
+//$color07: shade( $color07, $shade );
+//$color08: shade( $color08, $shade );
+
+////complement
+//$color01: complement( $color01 );
+//$color02: complement( $color02 );
+//$color03: complement( $color03 );
+//$color04: complement( $color04 );
+//$color05: complement( $color05 );
+//$color06: complement( $color06 );
+//$color07: complement( $color07 );
+//$color08: complement( $color08 );	
+
+//$rgba: .5; // adds transparancy
+//$color01: rgba( $color01, $rgba );
+//$color02: rgba( $color02, $rgba );
+//$color03: rgba( $color03, $rgba );
+//$color04: rgba( $color04, $rgba );
+//$color05: rgba( $color05, $rgba );
+//$color06: rgba( $color06, $rgba );
+//$color07: rgba( $color07, $rgba );
+//$color08: rgba( $color08, $rgba );
+
+
+//$addcolor: green;
+//$amt: 20%;
+//$color01: mix($addcolor,$color01,$amt);
+//$color02: mix($addcolor,$color02,$amt);
+//$color03: mix($addcolor,$color03,$amt);
+//$color04: mix($addcolor,$color04,$amt);
+//$color05: mix($addcolor,$color05,$amt);
+//$color06: mix($addcolor,$color06,$amt);
+//$color07: mix($addcolor,$color07,$amt);
+//$color08: mix($addcolor,$color08,$amt);
+
+//$color01: lighten($color01, 10%);
+//$color01: darken($color01, 20%);
+//$color01: tint($color01, 30%);
+//$color01: rgba($color01, .5);
+//$color01: mix($color01,$color02,20%);
+//$color01: saturate($color01, 20%);
+//$color01: desaturate($color01, 20%);
+//$color01: tint($color01, 20%);
+//$color01: shade($color01, 20%);
+//$color01: saturate(mix($color01,$color02,20%),20%);
+//$color01: mix($color01,$color02,20%);
+//$color01: complement($color01);
+//$color01: adjust-hue($color01, 180);
+//$color01: adjust-hue($color01, -30);
+
+
+//#{$name} .footer-widgets{ 
+//background-color:
+//radial-gradient(black 15%, transparent 16%) 0 0,
+//radial-gradient(black 15%, transparent 16%) 8px 8px,
+//radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+//radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+//background-color:#282828;
+//background-size:16px 16px;
+//}
+
+
+
+//// Ruled lines
+//#{$name} .site-footer {
+//	height: 500px;
+//	margin: 0px auto 0px;
+//	overflow: hidden;
+//	width: 1140px;   
+//
+//	background-color: #fff; 
+//	background-image: 
+//	linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+//	linear-gradient(#eee .1em, transparent .1em);
+//	background-size: 100% 2.2em;
+//}
+
+//// Pokadots
+//#{$name} .site-footer {
+//	height: 500px;
+//	margin: 0px auto 0px;
+//	overflow: hidden;
+//	width: 1140px;   
+//
+//background-color:tint(darken($bg_dark, 15%), 30%);
+//background-image: radial-gradient($bg_light 15%, transparent 16%),
+//radial-gradient(darken($bg_light, 5%) 15%, transparent 16%);
+//background-size:60px 60px;
+//background-position: 0 0, 30px 30px;
+//}
+
+
+
+/////////////////////////////////////////////////////////////
+// $text_ color, $bg_ background-color, $bor_ border color
+/////////////////////////////////////////////////////////////
+
+// Genesis Default Colors///////////////
+
+$bg_body: #f5f5f5;
+$text_body: #666;
+$bg_selection: #333;
+$text_selection: #fff;
+$text_a: #666;
+$text_blockquote: #999;
+$bg_entry-content: #333;
+$text_entry-content: #ddd;
+$text_h1: #333;
+$text_h2: #333;
+$text_h3: #333;
+$text_h4: #333;
+$text_h5: #333;
+$text_h6: #333;
+$text_textarea: #999;
+$bg_textarea: #fff;
+$bor_textarea: #999;
+$text_moz-placeholder: #999;
+$text_webkit-input-placeholder: #999;
+$text_button: #fff;
+$bg_button: #333;
+$bg_button_hover: #f15123;
+$text_button_hover: #fff;
+$bg_archive-description: #fff;
+$bg_author-box: #fff;
+$text_author-box-title: #333;
+$bor_author-box-title: #ddd;
+$text_entry-title-a: #333;
+$text_sidebar-widget-title-a: #333;
+$text_entry-title-a-hover: #666;
+$bor_featured-content-entry: #f5f5f5;
+$text_enews-widget: #999;
+$bg_sidebar-enews-widget: #333;
+$bg_enews-widget-widget-title: #fff;
+$bor_enews-widget-input-focus:#ddd;
+$text_enews-widget_input: #fff;
+$bg_enews-widget_input: #f15123;
+$bg_enews-widget_input-hover: #fff;
+$text_enews-widget_input-hover: #333;
+$bg_site-header: #fff;
+
+$text_site-title-a: #333;
+$text_site-title-a-hover: #333;
+$text_site-description: #999;
+
+$text_genesis-nav-menu: #999;
+$text_genesis-nav-menu-a: #999;
+
+$text_genesis-nav-menu-a-hover: #333;
+$text_genesis-nav-menu-current-menu-item-gt-a: #333;
+$text_genesis-nav-menu-sub-menu-current-menu-item-gt-a-hover: #333;
+$text_genesis-nav-menu-sub-menu-current-menu-item-gt-a: #999;
+$bg_genesis-nav-menu-sub-menu-a: #fff;
+$bor_genesis-nav-menu-sub-menu-a: #eee;
+$bor_site-header-sub-menu: #eee;
+ 
+$bg_nav-primary: #333;
+
+$text_nav-primary-a-hover: #fff;
+$text_nav-primary-current-menu-item-gt-a: #fff;
+$text_nav-primary-sub-menu-a-hover: #333;
+
+$bg_nav-secondary: #fff;
+
+$bg_entry: #fff;
+
+$bor_entry-content-a: #ddd;
+$text_entry-content-a: #f15123;
+$text_entry-content-a-hover: #333;
+
+
+$text_entry-meta: #999;
+$bor_entry-meta-a: #ddd;
+
+$bor_entry-footer-entry-meta: #f5f5f5;
+
+$bg_archive-pagination-li-a: #333;
+$bor_archive-pagination-li-a: 3px;
+$text_archive-pagination-li-a: #fff;
+
+$bg_archive-pagination-li-a-hover: #f15123;
+$bg_archive-pagination-li-a-active: #f15123;
+
+$bor_entry-pagination-a: #ddd;
+$bg_entry-pings: #fff;
+
+$bg_li-comment: #f5f5f5;
+$bor_li-comment: #fff;
+
+$bg_form-allowed-tags: #f5f5f5;
+
+
+$text_sidebar: #999;
+
+$bor_sidebar-a: #ddd;
+$bg_sidebar-widget: #fff;
+
+$bg_footer-widgets: #333;
+$text_footer-widgets: #999;
+
+$bor_footer-widgets-a: #666;
+$text_footer-widgets-a: #999;
+
+$text_footer-widgets-a-hover: #ddd;
+
+$text_footer-widgets-widget-title: #fff;
+
+
+$bor_footer-widgets-search-form-input-focus: #ddd;
+$bg_site-footer: #fff;
+$text_site-footer: #999;
+$bor_site-footer-a: #ddd;
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+//$color01: #ffffff; 	// background, post background
+//$color02: #f5f5f5; 	// background odd comment
+//$color03: #f15123;	// hover
+//$color04: #eeeeee;	// 
+//$color05: #dddddd;	// submenu archive active
+//$color06: #999999;	// menu text, footer text
+//$color07: #666666;	// text
+//$color08: #333333; 	//main color - menu, footer, titles. footer hover
+//
+//
+//$addcolor: red;
+//$amt: 5%;
+//$color01: mix($addcolor,$color01,2%);
+//$color02: mix($addcolor,$color02,$amt);
+//$color03: mix($addcolor,$color03,$amt);
+//$color04: mix($addcolor,$color04,$amt);
+//$color05: mix($addcolor,$color05,$amt);
+//$color06: mix($addcolor,$color06,$amt);
+//$color07: mix($addcolor,$color07,$amt);
+//$color08: mix($addcolor,$color08,90%);
+//
+//$sat: 30%;  // adds color
+//$color01: saturate( $color01, 5% ); 
+//$color02: saturate( $color02, $sat ); 
+//$color03: saturate( $color03, $sat ); 
+//$color04: saturate( $color04, $sat ); 
+//$color05: saturate( $color05, 60% );   // submenu archive active
+//$color06: saturate( $color06, $sat - 10% ); // boxy shadow
+//$color07: saturate( $color07, $sat ); 
+//$color08: saturate( $color08, $sat ); 
+
+///////////////////////////////////////////////////////////////////////////
+$primary: $color08;
+$hover: $color03;
+$bg_background: $color02;
+$text_light:$color05;
+$text_medium:$color06;
+$text_dark:$color08;
+$text_black:$color08;
+$text_white:$color01;
+$text_hover:$color03;
+$bg_light:$color05;
+$bg_medium:$color06;
+$bg_dark:$color08;
+$bg_black:$color08;
+$bg_white:$color01;
+$bg_hover:$color03;
+$bg_footer:$color02;
+$author:$color06;
+$comntlight:$color02;
+$comntdark:$color05;
+$shadcolor:$color06;
+$line:$color06;
+$menulight:$color05;
+$menudark:$color08;
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+// KPM Default Colors 
+//////////////////////////////////////////////////////////////////////////////////
+//$primary: #333333;
+//$hover: f15123;
+//
+//$bg_background: #f5f5f5;
+//
+//
+//$text_light:desaturate(lighten($primary, 55%), 20%);
+//$text_medium:lighten($primary, 15%);
+//$text_dark:$primary;
+//
+//$text_black:black;
+//$text_white:white;
+//$text_hover:$hover;
+//
+//$bg_light:desaturate(lighten($primary, 55%), 20%);
+//$bg_medium:lighten($primary, 15%);
+//$bg_dark:$primary;
+//
+//$bg_black:black;
+//$bg_white:white;
+//$bg_hover:$hover;
+//
+//$bg_footer:desaturate(lighten($primary, 58%), 70%);
+//$author:desaturate(lighten($primary, 45%), 75%);
+//$comntlight:desaturate(lighten($primary, 58%), 35%);
+//$comntdark:desaturate(lighten($primary, 50%), 40%);
+//$shadcolor:desaturate(lighten($primary, 28%), 80%);
+//$line:desaturate(lighten($primary, 40%), 50%);
+//
+//
+//$menulight:lighten($primary, 30%);
+//$menudark:darken($primary, 15%);
+///////////////////////////////////////////////////////////////////	

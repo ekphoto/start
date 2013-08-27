@@ -1,0 +1,451 @@
+//@import "partials/variables";
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// * Mixin for easy media queries
+// * @include bp(tablet) { SCSS here };
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin bp($point) {
+	@if $point == biggie {
+		@media (max-width : 1600px) { @content; }
+	}
+	@if $point == tablet {
+		@media (max-width : 1024px) { @content; }
+	}
+	@else if $point == phone {
+		@media (max-width : 768px) { @content; }
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// * Mixin for micro clearfix
+// * @include microclearfix;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin microclearfix {
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+	*zoom: 1;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// * Mixin for basic CSS triangles
+// * @include triangle(up, #000, 50px)
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin triangle($direction:up, $color:#000, $size:100px) {
+	@if($direction == up) {
+		border-color: transparent transparent $color;
+		border-style: solid;
+		border-width: 0 $size $size;
+		height: 0;
+		width: 0;
+	}
+	@if($direction == down) {
+		border-color: $color transparent transparent transparent;
+		border-style: solid;
+		border-width: $size;
+		height:0;
+		width:0;
+	}
+	@if($direction == left) {
+		border-color: transparent $color transparent transparent;
+		border-style: solid;
+		border-width: $size $size $size 0;
+		height: 0;
+		width: 0;
+	}
+	@if($direction == right) {
+		border-color: transparent transparent transparent $color;
+		border-style: solid;
+		border-width: $size 0 $size $size;
+		height:0;
+		width:0;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// * @font-face mixin
+// * Bulletproof font-face via Font Squirrel
+// * @include fontface('family', 'assets/fonts/', 'myfontname');
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin fontface($font-family, $font-url, $font-name) {
+	@font-face {
+		font: {
+			family: $font-family;
+			style: normal;
+			weight: normal;
+		}
+		src: url($font-url + '/' + $font-name + '.eot');
+		src: url($font-url + '/' + $font-name + '.eot#iefix') format('embedded-opentype'),
+			 url($font-url + '/' + $font-name + '.woff') format('woff'),
+			 url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
+			 url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// mixin for testing code 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin testing($colortest: #0c0) {
+	border: 10px solid $colortest !important;
+	background-color: darken($colortest, 10%)!important;
+	color: lighten($colortest, 25%)!important;
+}
+//  @include testing();
+// 	@include testing($testcolor);
+//  @include testing(#f00);
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// mixin for testing containers 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin containerTesting($cColorTest: #c0f6f0) {
+	.site-container {
+		@include testing($cColorTest); 
+	}
+	.site-header .wrap {
+		@include testing(#f90187); 
+	}
+	.nav-primary .wrap {
+		//@include testing(red);
+	}
+	.site-inner {
+		@include testing(yellow); 
+	}
+	.footer-widgets {
+		@include testing(pink); 
+	}
+	.site-footer .wrap {
+		//@include testing(#f2b64e); 
+	}
+	.site-footer {
+		@include testing(#2cd5cd); 
+	}
+}
+
+//  @include containerTesting();
+// 	@include containerTesting($testcolor);
+//  @include containerTesting(#f00);
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Box Shadow 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin boxwithshadow($bwsc:$shadcolor, $bwsb:3px, $bwss:8px, $bwsr:3px) {
+	border: $bwsb solid #fff;
+	//border: $bwsb solid $bg_background;
+	@include box-shadow($bwsc 0px 0px $bwss !important);
+	@include border-radius($bwsr);
+}
+	//usage
+	// 	@include boxwithshadow();
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Absolute Positioned 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+	//usage
+	//.abs {@include abs-pos(10px, 10px, 5px, 15px);}
+	// returns
+	//.abs {top: 10px;right: 10px;bottom: 5px;left: 15px;position: absolute;}
+	
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Mixins below asume 62.5% font size or $defaultFontSize 10px	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Font Size 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin font-size($sizeValue: $defaultFontSize ){
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.1 * $sizeValue) + rem;
+}
+	//usage
+	//body {@include font-size(10);}
+	// returns
+	//body {font-size: 10px; font-size: 2rem;}
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Font Size Important
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin font-size-i($sizeValue: $defaultFontSize ){
+  font-size: $sizeValue + px!important; //fallback for old browsers
+  font-size: (0.1 * $sizeValue) + rem!important;
+}
+	//usage
+	//body {@include font-size-i(10);}
+	// returns
+	//body {font-size: 10px; font-size: 2rem;}
+	
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Font Size Percent
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin font-size-p($sizeValue: $defaultFontSize, $percentSize: 100 ){
+	$newSize: $sizeValue * ( 0.01 * $percentSize);
+  font-size: $newSize + px; //fallback for old browsers
+  font-size: (0.1 * $newSize) + rem;
+}
+	//usage
+	//body {@include font-size-p(10, 100);}
+	// returns
+	//body {font-size: 10px; font-size: 2rem;}
+
+		
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Line Size 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin line-height($heightValue: $defaultFontSize ){
+	line-height: 10 * $heightValue + px; //fallback for old browsers
+	line-height: $heightValue + rem;
+}
+	//usage
+	//body {@include line-height (1);}
+	// returns
+	//body {line-height: 10px;line-height: 1rem;}
+
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Width Size 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin width-size($fontValue: $defaultFontSize, $widthValue: $pageWide ){
+  width: $widthValue + px;
+  width: ( 1 / $fontValue * $widthValue ) + rem;
+}
+//$pagewidth: 1140px; from variables
+	//body {@include width-size(16, 1140);}
+	// returns
+	//body {width: 1140px; width:71.25rem; width: 100%;}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Content Sidebar / Sidebar Content 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@function myPadCs($pageWide, $padPercent) {       // Padding between sidebar content
+	@return ($padPercent * $pageWide / 100) +px
+}
+@function myContent($pageWide, $contentPercent, $padPercent) {    // Content Sidebar Total Content Width
+	@return ($contentPercent * $pageWide / 100) - ($padPercent * $pageWide / 100 / 2) +px 
+}
+@function mySidebar($pageWide, $sidebarPercent, $padPercent) {    // Content Sidebar Total Sidebar Width
+	@return ($sidebarPercent * $pageWide / 100)  - ($padPercent * $pageWide / 100 / 2) +px
+}
+
+
+
+@mixin contentSidebarLayout($pageWide: 1140, $contentPercent: 60, $sidebarPercent: 40, $padPercent: 2 ){
+	
+//	.myTest {
+//			width: $iPadL;
+//	  width: $pageWide;	
+//	  width: myPadCs($pageWide, $padPercent);
+//	  width: myContent($pageWide, $contentPercent, $padPercent);
+//	  width: mySidebar($pageWide, $sidebarPercent, $padPercent);
+//	  width: $pageWide;
+//	}
+	
+	.content-sidebar,
+	.sidebar-content {
+		.content-sidebar-wrap {
+			width: $pageWide +px;							
+		}
+		.content {
+			width: myContent($pageWide, $contentPercent, $padPercent);
+			float: left;
+			padding: 0;
+		}
+		.sidebar-primary {
+			width: mySidebar($pageWide, $sidebarPercent, $padPercent);
+			float: left;
+			margin-left: myPadCs($pageWide, $padPercent);
+		}
+	}
+	.content-sidebar {
+		.content {
+			float: left;
+			padding: 0;
+		}
+		.sidebar-primary {
+			float: left;
+			margin-left: myPadCs($pageWide, $padPercent);
+		}
+	}
+	.sidebar-content {
+		.content {
+			float: right;
+			padding: 0;
+			margin-left: myPadCs($pageWide, $padPercent);
+		}
+		.sidebar-primary {
+			float: left;
+			margin-left: 0;  
+		}
+	}
+}
+
+//	@include contentSidebarLayout($myiPadL, $contentPercent, $sidebarPercent, $padPercent );
+//  	@include contentSidebarLayout($myiPadL, 60, 40, 2 );
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Content Sidebar Sidebar / Sidebar Content Sidebar /Sidebar Sidebar Content
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@function myPadCss($pageWide, $cssPadPercent) {       // Padding between sidebar content
+	@return ($pageWide *  $cssPadPercent / 100)
+}
+@function myContentCss($pageWide, $cssContentPercent, $padWidth) {    // Content Sidebar Total Content Width
+	@return ($cssContentPercent * $pageWide / 100) - ($padWidth / 2)
+}
+@function mySidebarCss($pageWide, $cssSidebarPercent, $padWidth) {    // Content Sidebar Total Sidebar Width
+	@return ($cssSidebarPercent * $pageWide / 100)  - ($padWidth / 2) - ($padWidth / 4)
+}
+@function mySecondaryCss($pageWide, $cssSecondaryPercent, $padWidth) {    // Content Sidebar Total Sidebar Width
+	@return ($cssSecondaryPercent * $pageWide / 100)  - ($padWidth / 2) - ($padWidth / 4)
+}
+@function myContentSidebarCss($contentWidth, $sidebarWidth, $padWidth) {    // Content Sidebar Total Sidebar Width
+	@return ($contentWidth + $padWidth + $sidebarWidth ) 
+}
+@function myTotalCss($contentWidth, $sidebarWidth, $secondaryWidth, $padWidth) {    // Content Sidebar Total Sidebar Width
+	@return ($contentWidth + $padWidth + $sidebarWidth  + $padWidth + $secondaryWidth)
+}
+@mixin CSSLayoutP($pageWide: 1140, $cssContentPercent: 60, $cssSidebarPercent: 20,$cssSecondaryPercent: 20, $cssPadPercent: 2){
+	
+	$padWidth: myPadCss($pageWide, $cssPadPercent);
+	$contentWidth: myContentCss($pageWide, $cssContentPercent, $padWidth);
+	$sidebarWidth: mySidebarCss($pageWide, $cssSidebarPercent, $padWidth);
+	$secondaryWidth: mySecondaryCss($pageWide, $cssSecondaryPercent, $padWidth);
+	$contentSide: myContentSidebarCss($contentWidth, $sidebarWidth, $padWidth);
+	$totalWidth: myTotalCss($contentWidth, $sidebarWidth, $secondaryWidth, $padWidth);
+	
+	$padWidth: $padWidth +px;
+	$contentWidth: $contentWidth +px;
+	$sidebarWidth: $sidebarWidth +px;
+	$secondaryWidth: $secondaryWidth +px;
+	$contentSide: $contentSide +px;
+	$totalWidth: $totalWidth +px;
+	
+	.content-sidebar-sidebar,
+	.sidebar-content-sidebar,
+	.sidebar-sidebar-content {
+		.content-sidebar-wrap {
+			width: $contentSide;						
+		}
+		.sidebar-secondary {
+			width: $secondaryWidth;   
+		}
+		.content {
+			width: $contentWidth; 
+			padding: 0;
+		}
+		.sidebar-primary {
+			width: $sidebarWidth;
+		}
+	}
+		.content-sidebar-sidebar {
+		.content {
+			float: left;
+		}
+		.sidebar-primary {
+			float: left;
+			margin-left: $padWidth;
+		}
+		.sidebar-secondary {
+			float: right; 
+			margin-left: 0%;
+		}
+	}
+	.sidebar-content-sidebar {
+		.content-sidebar-wrap {
+			float: right;
+		}
+		.sidebar-secondary {
+			float: left; 
+			margin-left: 0%;
+		}
+		.content {
+			float: left;
+			margin-left: $padWidth; 
+		}
+		.sidebar-primary {
+			float: right;
+		}
+	}
+	.sidebar-sidebar-content {
+		.content-sidebar-wrap {
+			float: right;
+		}
+		.sidebar-secondary {
+			float: left; 
+			margin-left: 0%;
+		}
+		.sidebar-primary {
+			float: left;
+			margin-left: $padWidth;
+		}
+		.content {
+			float: right;
+			margin-left: 0%;
+		}
+	}
+}
+
+//	@include CSSLayoutP($pageWide, $cssContentPercent, $cssSidebarPercent,$cssSecondaryPercent, $cssPadPercent);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Set Width
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@mixin setMyWidth($screenSize: 1140px){
+	//.site-container,     
+	.site-header,
+	.site-header .wrap,
+	.nav-primary,
+	.nav-primary .wrap,
+	.genesis-nav-menu,
+	.site-inner,
+	.site-inner .wrap,
+	.footer-widgets,
+	.site-footer,
+	.site-footer .wrap {
+		max-width: $screenSize;
+		min-width: $screenSize;
+		width: $screenSize;
+		margin: 0px auto 0px;    
+	}
+}
+
+//  @include setMyWidth($screenSize);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+@function menuWide($mwPageWidth, $mwSubPct) {
+	@return ($mwPageWidth * $mwSubPct / 100)
+}
+@function menuHeight($mhPageWidth, $mhMediaSize) {
+	@return ($mhMediaSize / $mhPageWidth * $subMenuHeightPx) 
+}
+
+@mixin setSubWidth($smwPageWidth:1140, $smwSubPct:17.5, $newMediaSize: 1140){
+	.genesis-nav-menu .sub-menu,
+	.genesis-nav-menu .sub-menu a  {
+		width: menuWide($newMediaSize, $smwSubPct) +px;	
+	}
+	.genesis-nav-menu .sub-menu .sub-menu {
+		$subMenuHeight: menuHeight($smwPageWidth, $newMediaSize) +px;
+		$newMargin: menuWide($newMediaSize, $smwSubPct) +px;	
+		
+		margin: $subMenuHeight 0 0 $newMargin;
+		//margin: $subMenuHeight 0 0 $subMenuWide;
+
+	}
+}
+//@include setSubWidth($pageWide, $subMenuWidthPct, $newMediaSize);
+//@include setSubWidth($pageWide, $subMenuWidthPct, $myiPadL);

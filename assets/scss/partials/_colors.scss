@@ -1,0 +1,92 @@
+///////////////////////////////////////////////////////////////////////////////////////////
+// Create Color Styles
+//
+// This calls the color calculations - base, display, kuler
+// then calls Create Color Styles
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+
+$text_link: blue;
+
+//// --------------------------------------------  
+///*  Default Style Colors */            
+//// --------------------------------------------
+//$name: "";									// For Base Colors
+//@import "partials/colors_base"; 			// Create the base color styles 
+//// --------------------------------------------  
+///*  Default Display Style Colors */            
+//// --------------------------------------------
+//$name: "";
+//$name: ".kpm-";
+//@import "partials/colors_display";  		// Create Web Page Display Style
+
+
+
+// --------------------------------------------  
+/*  Red Style Colors     */                        
+// --------------------------------------------  
+$name: "red";
+$primary: #be0c0c;
+$hover: #05fe17;
+@import "partials/colors_create_styles"; 	// Create Color Styles
+// --------------------------------------------  
+/*  Green Style Colors    */                         
+// --------------------------------------------  
+$name: "green";
+$primary: #03b149;
+$hover: #f26522;
+@import "partials/colors_create_styles"; 	// Create Color Styles
+// --------------------------------------------  
+/*  Blue Style Colors     */                       
+// --------------------------------------------  
+$name: blue;
+$primary: #0370b1;
+$hover: #f26522;
+@import "partials/colors_create_styles"; 	// Create Color Styles
+// --------------------------------------------  
+/*  Purple Style Colors   */                        
+// --------------------------------------------  
+$name: purple;
+$primary: #a105c1;
+$hover: #05fe17;
+@import "partials/colors_create_styles"; 	// Create Color Styles
+// --------------------------------------------  
+/*  Multi Style Colors    */                        
+// --------------------------------------------  
+/* Kuler Watermellon */
+$name: "multi";
+$kuler1: #7D8A2E;
+$kuler2: #C9D787;
+$kuler3: #FFFFFF;
+$kuler4: #FFC0A9;
+$kuler5: #FF8598;
+
+$tempname: $name;
+$name: ".kpm-" + $tempname;					// For Base Colors
+@import "partials/colors_calculate_kuler"; 	// Calculate Colors
+@import "partials/colors_display";  		// Calculate Colors For Web Page Display
+@import "partials/colors_base"; 			// Create the base color styles 
+$name: ".kpm-td" + $tempname;				// For 3D Colors
+@import "partials/colors_display";  		// Calculate 3D Colors For Web Page Display
+@import "partials/colors_base"; 			// Create the 3D base color styles 
+@import "partials/colors_3d"; 				// Create the 3D boxy color styles 
+
+
+
+// --------------------------------------------  
+/*  Default Style Colors */            
+// --------------------------------------------
+@import "partials/colors_defaults";			// Reload Default Colors
+$name: "";									// For Base Colors
+@import "partials/colors_base"; 			// Create the base color styles 
+// --------------------------------------------  
+/*  Default Display Style Colors */            
+// --------------------------------------------
+$name: "";
+$name: ".kpm-";
+@import "partials/colors_display";  		// Create Web Page Display Style
+// --------------------------------------------  
+
+
+
+

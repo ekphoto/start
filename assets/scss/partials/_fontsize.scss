@@ -1,0 +1,248 @@
+// Calculate on Default Theme font sizes at 100%
+// change $newFontPct to new percentage
+//  and call this file for new font sizes
+
+
+//$newFontPct: 100;  // New Font Percentage
+//$newFontPct: 55;  // New Font Percentage
+
+
+//html {
+//	font-size: 62.5%; 
+//}
+
+body {
+	@include font-size-p(16, $newFontPct); 
+}
+
+blockquote::before {	
+	@include font-size-p(30, $newFontPct); 
+}
+	
+h1 {	
+	@include font-size-p(36, $newFontPct); 
+}	
+	
+h2 {	
+	@include font-size-p(30, $newFontPct); 
+}	
+	
+h3 {	
+	@include font-size-p(24, $newFontPct);  
+}	
+	
+h4 {	
+	@include font-size-p(20, $newFontPct);  
+}	
+	
+h5 {	
+	@include font-size-p(18, $newFontPct); 
+}	
+	
+h6 {	
+	@include font-size-p(16, $newFontPct); 
+}	
+
+input,
+select,
+textarea {
+	@include font-size-p(14, $newFontPct); 
+}
+
+.wp-caption-text {
+	@include font-size-p(14, $newFontPct); 
+}
+
+.author-box-title {
+	@include font-size-p(16, $newFontPct); 
+}
+
+//.entry-title {	
+//	@include font-size-p(36, $newFontPct); 
+//}	
+
+.entry-title {	
+	@include font-size-p(24, $newFontPct); 
+}
+
+.widget-title {	
+	@include font-size-p(16, $newFontPct); 
+}	
+
+.archive-title {
+	@include font-size-p(20, $newFontPct); 
+}	
+
+.featured-content .entry-title {
+	@include font-size-p(20, $newFontPct); 
+}
+
+div.gform_wrapper input[type="email"],	
+div.gform_wrapper input[type="text"],	
+div.gform_wrapper textarea,	
+div.gform_wrapper .ginput_complex label,
+div.gform_wrapper .gform_footer input[type="submit"],
+input[type="submit"],
+input:hover[type="submit"] {	
+	@include font-size-p(16, $newFontPct); 
+}	
+
+div.gform_wrapper .gform_footer input[type="submit"] {
+	@include font-size-p(20, $newFontPct); 
+}
+
+//.site-title {
+//	@include font-size-p(28, $newFontPct); 
+//}	
+.site-title {
+	@include font-size-p(54, $newFontPct); 
+}
+
+//.site-description {
+//	@include font-size-p(16, $newFontPct); 
+//}	
+
+.site-description {
+	@include font-size-p(14, $newFontPct); 
+}
+
+.genesis-nav-menu .sub-menu a {
+	@include font-size-p(14, $newFontPct); 
+}
+
+
+//.entry-meta {
+//	@include font-size-p(14, $newFontPct); 
+//}
+
+.entry-meta {
+	@include font-size-p(10, $newFontPct); 
+}
+
+.archive-pagination,
+.entry-pagination {
+	@include font-size-p(14, $newFontPct); 
+}
+
+.form-allowed-tags {
+	@include font-size-p(14, $newFontPct); 
+}
+
+.site-footer {
+	@include font-size-p(14, $newFontPct); 
+}
+
+///////////////////////////////////////////////////////////////////////////////////	
+//	.post h2 a {
+//		@include font-size-p(16); 
+//	}
+//		
+//	
+
+
+
+.genesis-nav-menu {
+	@include font-size-p(13, $newFontPct); 
+}
+
+.site-header .widget-area {
+	@include font-size-p(16, $newFontPct); 
+}
+
+.entry-content {
+	@include font-size-p(16, $newFontPct); 
+}
+
+.sidebar .entry {
+	@include font-size-p(14, $newFontPct); 
+}
+.sidebar .entry-title {
+	@include font-size-p(16, $newFontPct); 
+}
+
+.footer-widgets {
+	@include font-size-p(13, $newFontPct); 
+}
+.footer-widgets p{
+	@include font-size-p(14, $newFontPct); 
+}
+
+.site-footer p {
+	@include font-size-p(14, $newFontPct); 
+}
+
+.widget .widget-wrap .entry-title,
+.widgettitle {
+	@include font-size-p(16, $newFontPct); 
+}
+
+.featured-bottom p {
+	@include font-size-p(13, $newFontPct); 
+}
+
+.featured-bottom .entry-title a {
+	@include font-size-p(12, $newFontPct); 
+}
+
+pre {
+	@include font-size-p(10, $newFontPct); 
+}
+
+.archive-navigation,
+.archive-pagination {
+	@include font-size-p(14, $newFontPct); 
+}
+
+.site-header .widget-area .genesis-nav-menu a {
+	@include font-size-p(10, $newFontPct); 
+}
+
+.author-box {
+	@include font-size-p(12, $newFontPct); 
+}
+
+.author-box p{
+	@include font-size-p(14, $newFontPct); 
+}
+
+.author-box h1{
+	@include font-size-p(16, $newFontPct); 
+}
+
+#respond {
+	@include font-size-p(12, $newFontPct); 
+}
+
+#respond p{
+	@include font-size-p(14, $newFontPct); 
+}
+
+#respond h3{
+	@include font-size-p(20, $newFontPct); 
+}
+
+#respond input[type="submit"],
+#respond input:hover[type="submit"] {	
+	@include font-size-p(12, $newFontPct); 
+}
+
+.more-link {	
+	@include font-size-p(14, $newFontPct); 
+}
+
+.entry-comments {
+	@include font-size-p(12, $newFontPct); 
+	font-weight: 100;
+	text-shadow: none;
+}
+
+.entry-comments p{
+	@include font-size-p(14, $newFontPct); 
+}
+.comment-author a{
+	@include font-size-p(14, $newFontPct); 
+}
+
+.comment-meta a{
+	@include font-size-p(10, $newFontPct); 
+}

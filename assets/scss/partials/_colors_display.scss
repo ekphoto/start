@@ -1,0 +1,79 @@
+//------------------------------------------------- 
+// Colors to  Display on Web Page  
+// ------------------------------------------------  
+#{$name}menu,
+#{$name}shadow,
+#{$name}line,			
+#{$name}text_light,		
+#{$name}text_medium,		
+#{$name}text_dark,	
+#{$name}text_black,		
+#{$name}text_white,		
+#{$name}text_hover,	
+#{$name}bg_light,		
+#{$name}bg_medium,		
+#{$name}bg_dark,		
+#{$name}bg_black,		
+#{$name}bg_white,		
+#{$name}bg_hover,		
+#{$name}bg_footer {
+	margin: 0 0 5px;
+	overflow: hidden;
+	padding: 5px;
+	border: 1px solid black;
+}
+#{$name}shadow {
+    background-color: $shadcolor;
+}
+#{$name}line {
+    background-color: $line;
+}			
+#{$name}text_light {
+    color: $text_light;
+}		
+#{$name}text_medium {
+    color: $text_medium;
+}		
+#{$name}text_dark {
+    color: $text_dark;
+}	
+#{$name}text_black {
+    color: $text_black;
+}		
+#{$name}text_white {
+    color: $text_white;
+	background-color: black;
+}		
+#{$name}text_hover {
+    color: $text_hover;
+}	
+#{$name}bg_light {
+    background-color: $bg_light;
+}		
+#{$name}bg_medium {
+    background-color: $bg_medium;
+	color: white;
+}	
+#{$name}bg_dark {
+    background-color: $bg_dark;
+	color: white;
+}		
+#{$name}bg_black {
+    background-color: $bg_black;
+	color: white;
+}		
+#{$name}bg_white {
+    background-color: $bg_white;
+}		
+#{$name}bg_hover {
+    background-color: $bg_hover;
+}		
+#{$name}bg_footer {
+    background-color: $bg_footer;
+}
+#{$name}menu {
+	color: $text_light;
+	background-color: $bg_dark;
+  	@include background((),
+    	linear-gradient(top, $menulight ,$menudark));
+}

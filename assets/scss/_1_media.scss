@@ -1,0 +1,421 @@
+
+////////////////////////////////////////////////////////////
+//  @include testing();
+//  @include containerTesting();
+////////////////////////////////////////////////////////////
+@import "partials/ipad";
+@import "partials/media-queries";
+
+//#genesis-responsive-slider,
+//.sidebar-secondary,
+//.sidebar .widget, 
+//.genesis-nav-menu,
+//.site-header .widget-area,	
+//.entry-meta,
+//.site-header .widget-wrap .textwidget,
+//.site-header .simple-menu-icons,
+//.genesis-nav-menu,
+//.sidebar .widget, 
+//.sidebar-primary,
+//.sidebar-secondary,
+//.site-footer,
+//.footer-widgets,
+//.footer-widgets-1,
+//.footer-widgets-2,
+//.footer-widgets-3 {
+//	display: block ;
+//}
+
+.mobile_menu,
+#menu-mobile-navigation{
+	display: none !important; 
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* iPad Landscape */
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) { 
+@media only screen and (max-width: 1139px) {
+
+	@import "partials/ipad";  // iPad CSS
+
+	@include setMyWidth($iPadL);
+	
+//	@include containerTesting();
+	
+	.title-area,
+	.site-header .widget-area {      
+	 	width: 50%;  
+	}
+	.site-header .simple-menu-icons { 
+		margin-top: 20px;				
+	}
+	.site-title {
+		padding-top: 0;
+	}
+	.site-title a{	
+		@include font-size-i(40);  					//@include testing(red);		
+	}
+	.site-description {	
+		@include font-size-i(14);
+	}
+	.site-inner {
+		padding: 10px 0 0 0;
+	}
+	.content {
+		padding: 0;
+	}
+	
+	@include contentSidebarSidebarLayout(); // Content-Sidebar Sidebar
+	@include contentSidebarLayout();  		// Content-Sidebar
+	
+	.featured-bottom-left,
+	.featured-bottom-middle,
+	.featured-bottom-right,
+	.footer-widgets-1 {                
+	 	width: 33%;
+	}
+	.header-image .site-header .widget-area {
+		padding: 0;
+	}
+	.site-inner {
+		background: none;
+	}
+	.site-header .search-form {
+		margin: 8px auto ;
+		margin: .8rem auto;
+	}
+	.genesis-nav-menu li.right {
+		display: none;
+	}
+	.site-footer {
+		margin-top: 0.43%; 
+	}
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+		width: 30%;
+	}
+	.footer-widgets {
+		padding: 1% 1% 1%;
+	}
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///* ipad Portrait */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media only screen and (max-width: 1023px) {  
+//@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+
+	@include setMyWidth($iPadP);
+	
+	.title-area,
+	.site-header .widget-area {      
+	 	width: 50%; 
+	}
+	
+	.site-header .simple-menu-icons { 
+		margin-top: 20px;				
+	}
+	
+	.site-title {
+		padding-top: 0;   
+		a{
+			@include font-size(38);                    //  @include testing(green);
+			@include font-size-i(38); 				
+		}
+	}
+	.site-description {	
+			@include font-size-i(14);                     
+	}
+	
+	.content {
+		padding: 0;
+	}
+	.site-inner {
+		padding: 10px 0 0 0;
+	}
+
+
+	@include contentSidebarSidebarLayout(); // Content-Sidebar Sidebar
+	@include contentSidebarLayout(); 	 	// Content-Sidebar	
+	
+	// fix problems with overflow in sidebar - screwas up iPad screen width
+	.sidebar-primary {
+			overflow: scroll; 
+			overflow: hidden; 
+		}
+	
+	.footer-widgets-1 {
+		width: 100%;
+	}
+	.content {
+		padding: 0;
+	}
+	.site-inner {
+		padding: 0;
+	}
+	
+	
+	.featured-bottom-left,
+	.featured-bottom-middle,
+	.featured-bottom-right,
+	.footer-widgets-1 {                
+	 	width: 33%;
+	}
+	.site-footer {
+		margin-top: 0.43%;
+	}
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+		width: 30%;
+	}
+	.footer-widgets {
+		padding: 1% 1% 1%;
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//////// Fix For	
+//////// Problem with Inner Site moving to Right ?
+//////// occurs if set wrap in functions.php
+//////////////////////////////////////////////////////////////////////////////////	
+////	.site-inner {
+////		position:relative; 						
+////		top:0px;
+////		//right:60px;
+////		left:-45px;
+////		background: none;
+////	} 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/* iPhone Landscape */
+//////////////////////////////////////////////////////////////////////////////////////////////////
+@media only screen and (max-width: 766px) {
+
+	@import "partials/iphone";
+
+	@include setMyWidth($iPhoneL);
+
+	.wrap,
+	.genesis-nav-menu,
+	.footer-widgets {
+		max-width: $iPhoneL;
+		width: $iPhoneL;
+	}
+	
+	.title-area,
+	.site-header .widget-area {      
+	 	width: 100%; 
+		text-align: center; 
+	}
+	.site-header .simple-menu-icons { 
+		margin-top: 0;				
+	}
+	.site-title {
+		padding-top: 0;
+		a{	
+			@include font-size-i(40);						//@include testing(blue);
+		}
+	}
+	.site-description {	
+		@include font-size-i(14);
+	}
+	
+	.site-inner {
+		 padding: 0;
+	 }
+	
+	.content-sidebar .content {
+		width: 100.0%;
+	}
+	.footer-widgets-1 {
+		width: 100%;
+	}
+	.content {
+		padding: 0;
+	}
+	.site-inner {
+		padding: 0;
+	}
+
+	.featured-bottom-left,
+	.featured-bottom-middle,
+	.featured-bottom-right,
+	.footer-widgets-1 {                
+	 	width: 33%;
+	}
+	.site-footer {
+		margin-top: 0.43%;
+	}
+	.footer-widgets-1 {
+		width: 98%;
+	}
+	.footer-widgets {
+		padding: 1% 1% 1%;
+	}
+
+	#menu-mobile-navigation {
+		display: block !important;
+		margin: 0px auto 0px;
+		margin-bottom: 10px;
+		a {
+			@include font-size(12);
+		}
+	}
+	
+	.genesis-nav-menu,
+	.site-header .widget-wrap .textwidget,
+	//.site-header .simple-menu-icons,
+	.sidebar-primary,
+	.sidebar-secondary,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+		display: none;
+	}
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* iPhone Portrait */
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media only screen and (max-width: 400px) {
+
+	@import "partials/iphone";
+
+	@include setMyWidth($iPhoneP);
+
+	.wrap,
+	.genesis-nav-menu,
+	.footer-widgets {
+		max-width: $iPhoneP;
+		width: $iPhoneP;
+	}
+	
+	.title-area,
+	.site-header .widget-area {      
+	 	width: 100%; 
+		text-align: center; 
+	}
+	
+	.title-area {
+		padding: 0;
+		margin: 0;
+		//height: 70px !important; 
+	}
+
+	.site-title {
+		padding-top: 0;
+		margin: 0;
+		a{	
+			@include font-size-i(28);					//@include testing(yellow);
+			text-align: center;
+		}
+	}
+	.site-description {	
+		padding: 0 0 5px 0;
+		@include font-size-i(12);
+	}
+	
+	.site-inner {
+		 padding: 0;
+	 }
+	
+	.content-sidebar .content {
+		width: 100.0%;
+	}
+	.footer-widgets-1 {
+		width: 100%;
+	}
+	.content {
+		padding: 0;
+	}
+	.site-inner {
+		padding: 0;
+	}
+
+	.featured-bottom-left,
+	.featured-bottom-middle,
+	.featured-bottom-right,
+	.footer-widgets-1 {                
+	 	width: 98%;
+	}
+	.site-footer {
+		margin-top: 0.43%;
+	}
+	.footer-widgets-1 {
+		width: 98%;
+	}
+	.footer-widgets {
+		padding: 1% 1% 1%;
+	}
+	
+	.mobile_menu {
+		display: block !important;
+		margin-bottom: 10px; 
+	}
+
+	#menu-mobile-navigation {
+		display: block !important;
+		margin: 0px auto 0px;
+		margin-bottom: 10px;
+		a {
+			@include font-size(12);
+		}
+	}
+	.genesis-nav-menu,
+	.site-header .widget-wrap .textwidget,
+	.site-header .simple-menu-icons,
+	.sidebar-primary,
+	.sidebar-secondary,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+		display: none;
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Reset display items
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Make sure main menu re-appears when scaled up 
+// will reset for anything bigger than iPhone
+
+@media only screen and (min-width: 769px) {
+ 	
+	#genesis-responsive-slider,
+	.sidebar-secondary,
+	.sidebar .widget, 
+	.genesis-nav-menu,
+	.site-header .widget-area,	
+	.entry-meta,
+	.site-header .widget-wrap .textwidget,
+	.site-header .simple-menu-icons,
+	.genesis-nav-menu,
+	.sidebar .widget, 
+	.sidebar-primary,
+	.sidebar-secondary,
+	.site-footer,
+	.footer-widgets,
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+        display: block !important;
+    }
+	
+	
+	.mobile_menu,
+	#menu-mobile-navigation{
+		display: none !important; 
+	}
+	
+	.mobile_menu,
+	#menu-mobile-navigation{
+		display: none !important; 
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+

@@ -1,0 +1,46 @@
+///////////////////////////////////////////////////////////////	
+// Calculate Kuler Colors 
+// $kuler1, $kuler2, $kuler3, $kuler4, $kuler5
+// used whith name multi style  $name: multi;
+///////////////////////////////////////////////////////////////	
+
+// Kuler Color Setup                     
+// Enter Primary Color to generate 
+//
+// Kuler Watermellon 
+//$kuler1:#7D8A2E; $kuler2:#C9D787; $kuler3:#FFFFFF; $kuler4:#FFC0A9; $kuler5:#FF8598;
+//
+// Kuler circus III 
+//$kuler1:#2E0927; $kuler2:#D90000; $kuler3:#FF2D00; $kuler4:#FF8C00; $kuler5:#04756F;
+//
+// Orange on Gray
+//$kuler1:#FFF8E3; $kuler2:#CCCC9F; $kuler3:#33332D; $kuler4:#9FB4CC; $kuler5:#DB4105;
+
+//$name:$name;	
+
+$primary:$kuler5;
+$hover:$kuler1;
+
+$text_light:$kuler2;
+$text_medium:$kuler4;
+$text_dark:$kuler5;
+$text_black:black;
+$text_white:white;
+$text_hover:$kuler1;
+
+$bg_light:$kuler2;
+$bg_medium:$kuler4;
+$bg_dark:darken($kuler5, 10%);
+$bg_black:black;
+$bg_white:white;
+$bg_hover:$kuler1;
+$bg_footer:$kuler2;
+
+$author:darken($kuler3, 10%);
+$comntlight:$kuler2;
+$comntdark:$kuler3;
+$shadcolor:$kuler4;
+$line:$kuler4;
+
+$menulight:lighten($kuler5, 30%);
+$menudark:darken($kuler5, 15%);

@@ -1,0 +1,69 @@
+/*!
+/*	Theme Name: KPM Boxy Slider
+	Description: Kelley ProMedia child theme created for use with Genesis Framework.
+	Author: Kelley ProMedia
+	Author URI: http://www.kelleypromedia.com/
+	Version: 1.0.1
+ 
+	Tags: black, orange, white, one-column, two-columns, three-columns, fixed-width, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+ 
+	Template: genesis
+	Template Version: 2.0.0
+ 
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+// Compass imports
+@import "compass";
+@import "compass/css3";
+
+// Reset, Variables, Mixins, Etc
+// DO NOT EDIT ORDER OF FILES
+@import "partials/variables";				// Default Variables
+@import "partials/colors_defaults"; 		// Default Colors
+@import "partials/mixins";					// Mixins and Functions
+
+
+
+// Genesis
+@import "partials/genesis";					// Default Genesis Style and Layout
+
+
+// Kelley ProMedia Custom Style Layout
+@import "partials/kpm_boxy_slider";			// Custom Layout
+
+// Kelley ProMedia Custom Colors
+@import "partials/colors";					// Custom Colors - includes boxy layout
+
+
+// SASS Media Queries
+@import "partials/media-queries"; 			// Custom from online sources
+@import "partials/layout";
+
+
+// Kelley ProMedia - Media Display 
+@import "partials/media";					// Custom media displays - used for responsive display
+
+
+// use for testing
+//@import "partials/test_gen";				// Use for testing
+// Gravity Forms Custom Styles
+//@import "partials/gf_madlib";
+
+// Gravity Forms Custom Styles
+@import "partials/gform"	;				// Custom Gravity Forms Styles
+
+
+
+// Page and Site Styles
+//@import "partials/page";
+//@import "partials/posts";
+//@import "partials/widgets";
+//@import "partials/search";
+//@import "partials/comments";
+//@import "partials/forms";
+
+// Helper Classes
+//@import "partials/helpers";
+

@@ -1,0 +1,406 @@
+////////////////////////////////////////////////////////////
+/*  Kelley ProMedia Custom Base Colors   */
+////////////////////////////////////////////////////////////
+//  @include testing();
+////////////////////////////////////////////////////////////
+/*  Build Box with Shadow  */
+////////////////////////////////////////////////////////////
+#{$name} .entry,
+#{$name} .archive-description,
+#{$name} .entry-comments,
+#{$name} .author-box,
+#{$name} .footer-widgets,
+#{$name} .sidebar .widget, 
+#{$name} #respond.comment-respond,
+#{$name} .flexslider {
+	@include boxwithshadow();
+}
+// problems with using .entry
+// turn off for Featured Bottom
+// and sidebar featured page
+#{$name} .widget .widget-wrap .entry,
+#{$name} .featured-bottom .entry {
+	border: none !important;
+	@include boxwithshadow($bg_background, 0px, 0px, 0px);
+}
+////////////////////////////////////////////////////////////
+/*  Body  */
+////////////////////////////////////////////////////////////
+
+/*  Change as Needed ///////////////////////////////////// */
+$bg_background: lighten($bg_light, 2%);  // or set to white
+$bg_background: $bg_white;  
+
+/* /////////////////////////////////////////////////////// */
+
+
+#{$name} .site-container {
+background-color: $bg_background !important;
+}
+
+//#{$name} body {
+//	background-color: #fff !important;
+//}
+
+
+////////////////////////////////////////////////////////////
+/*   Heading Tags  */
+////////////////////////////////////////////////////////////
+#{$name} h1 {
+	color: $text_dark;
+}
+#{$name} h2 {
+	color: lighten($text_dark, 1%);
+}
+#{$name} h3 {
+	color: lighten($text_dark, 2%);
+}
+#{$name} h4 {
+	color: lighten($text_dark, 3%);
+}
+#{$name} h5 {
+	color: lighten($text_dark, 4%);
+}
+#{$name} h6 {
+	color: lighten($text_dark, 5%);
+}
+#{$name} .entry-content a{
+	color: $text_black;
+	&:link {
+		color: $text_link;
+	}
+	&:visited {
+		color: $text_black;
+	}
+	&:focus {
+		color: $text_hover;
+	}
+	&:active {
+		color: $text_hover;
+	}	
+	&:hover {
+		color: $text_hover;
+	}
+	&:active {
+		color: $text_hover;
+	}	
+}
+////////////////////////////////////////////////////////////
+/*   Site Title  */
+////////////////////////////////////////////////////////////
+#{$name} .site-title a {
+	color: $text_dark !important;
+	&:hover {color: $text_dark !important;}
+}
+////////////////////////////////////////////////////////////
+/*   Menu  */
+////////////////////////////////////////////////////////////
+#{$name} .nav-primary {
+	background-color: $bg_background !important;
+	}
+#{$name} .menu { 
+	background-color: $bg_dark;
+	border: 1px solid lighten($bg_dark, 5%)!important;
+	text-shadow: 0 -1px -1px $shadcolor;
+	a { 
+		color: $text_light;
+		&:hover {
+			color: $text_white !important;
+			background-color: darken($bg_dark, 8%) !important;
+			border: none !important;
+		}
+	}
+	.current-menu-item > a  {
+		color: $text_light !important;
+		background-color: $bg_medium !important;  
+		background-color: darken($bg_dark, 8%)!important; 
+		&:hover {
+			background-color: darken($bg_medium, 8%)!important;
+			border: none !important;
+		}
+	}
+	.sub-menu a {
+		color: $text_dark;
+		background-color: $bg_light; 
+		border: 1px solid darken($bg_light, 8%);
+		@include text-shadow ($shadcolor 0 -1px -1px);
+		&:hover { 
+			background-color: $bg_dark;
+			border: 1px solid lighten($bg_dark, 5%)!important;
+			color: $text_white !important;
+			text-shadow: none;
+		}
+		&:visited {}
+		&:active {}
+	}
+} 
+////////////////////////////////////////////////////////////
+/*   More Link  */
+////////////////////////////////////////////////////////////
+#{$name} .more-link { 
+	background-color: darken($bg_dark, 8%);
+	border: 1px solid lighten($bg_dark, 5%)!important;
+	text-shadow: 0 -1px -1px $shadcolor;
+	color: $text_light !important;
+	&:hover {
+		background-color: $bg_light; 
+		color: $text_black !important;
+	}
+}
+////////////////////////////////////////////////////////////
+/*  Featured Bottom  */
+////////////////////////////////////////////////////////////
+#{$name} .featured-bottom {
+	.page {
+		background-color: $bg_background !important;
+	}
+	.entry-title { 
+		background-color: $bg_dark;
+		border: 1px solid lighten($bg_dark, 5%)!important;
+		text-shadow: 0 -1px -1px $shadcolor;
+		a {	color: darken($text_light, 10%); 
+			&:hover {
+				color:$text_black !important;
+			}
+		}
+		&:hover {
+			background-color: darken($bg_medium, 8%); 
+			color: $text_black !important;
+		}
+	}
+	.more-link {
+		border: none !important;
+		text-decoration: none;
+		background-color: $bg_background;
+		color: $text_black !important;
+		&:hover {
+			color: $text_medium !important
+		}
+	}
+}
+////////////////////////////////////////////////////////////
+/*   Post Entry Meta  */
+////////////////////////////////////////////////////////////
+#{$name} .entry-meta {
+	border-top: 1px solid $line; 
+		a {
+		color: lighten($text_dark, 5%);
+		text-decoration: none !important;
+		border: none;
+		&:hover { 
+			color: $text_light !important;
+			background-color: $bg_dark;
+		}
+	}
+}
+////////////////////////////////////////////////////////////
+/*   Post  */
+////////////////////////////////////////////////////////////
+#{$name} .post h2 a {
+  color: $text_dark;
+  &:hover {
+	  color: $text_hover;
+	}
+}
+////////////////////////////////////////////////////////////
+/*   Post Footer Entry Meta  */
+////////////////////////////////////////////////////////////
+#{$name} .entry-footer .entry-meta  {
+	border-top: 1px solid $line; 
+}
+////////////////////////////////////////////////////////////
+/*   Comments */
+////////////////////////////////////////////////////////////
+#{$name} .entry-comments {
+	background-color: $bg_background;
+	a {
+		border: none;
+		color: lighten($text_dark, 2%);
+		&:hover { 
+			color: $text_hover !important;
+		}
+	}
+}
+#{$name} .author-box {
+	color: $text_black;
+	background-color: lighten($author, 8%); 
+	&:hover {}
+}
+// Comment Boxes
+#{$name} .comment-list .depth-1 {
+	color: $text_black;
+	background-color: $comntdark;	
+}
+#{$name} li.comment {
+	.odd {
+		color: $text_black;
+		background-color: $comntdark;	
+	}
+	.even {
+		color: $text_black;
+		background-color: $comntlight;
+	}
+}
+////////////////////////////////////////////////////////////
+/*   Leave a Reply Box  */
+////////////////////////////////////////////////////////////
+// Leave a reply and comment Luv
+#{$name} #respond a  {
+	color: $text_dark;
+}
+#{$name} #respond.comment-respond {
+	background-color: $bg_light;
+}
+#{$name} input[type="submit"],
+#{$name} input:hover[type="submit"] { 
+	background-color: $bg_dark;
+	border: 1px solid lighten($bg_dark, 5%)!important;
+	text-shadow: 0 -1px -1px $shadcolor;
+}
+#{$name} input:hover[type="button"],
+#{$name} input:hover[type="submit"]{
+	color: $text_hover !important;
+}
+////////////////////////////////////////////////////////////
+/*   Archive Navigation */
+////////////////////////////////////////////////////////////
+#{$name} .archive-pagination li a,
+#{$name} .archive-navigation li a {
+		color: $text_white !important;
+		background-color: darken($bg_dark, 8%);
+		border: 1px solid lighten($bg_dark, 5%)!important;
+		text-shadow: 0 -1px -1px $shadcolor;
+	&:hover {
+		color: $text_black !important;
+		background: $bg_light;
+	}
+}
+#{$name} .archive-pagination li.active,
+#{$name} .archive-navigation li.active {
+	a {
+		color: $text_black !important;
+		background: $bg_light;
+	}
+}
+////////////////////////////////////////////////////////////
+/*   Footer  */
+////////////////////////////////////////////////////////////
+// Footer Widgets Wrap
+#{$name} .footer-widgets {
+	color: $text_black !important;
+	background-color: $bg_footer;
+    @include text-shadow ($shadcolor 0 -1px -1px);
+}
+
+// Footer Widgets text
+// Footer Widgets Titles
+#{$name} .footer-widgets {
+	a {
+		color: $text_dark;
+		border: none;
+		&:hover {
+			color: $text_hover !important;
+		}
+	}
+	.widgettitle {
+		color: $text_dark;
+			&:hover {
+				color: $text_hover !important;
+			}
+	}
+	.entry{ 
+		background-color: transparent !important; 
+	}
+}
+
+////////////////////////////////////////////////////////////
+/*   Footer Credits  */
+////////////////////////////////////////////////////////////
+// Very bottom credits wrap
+#{$name} .site-footer {
+	background-color: $bg_background;
+	a{
+		border: none;
+		color: $text_dark; 
+		&:hover {
+			color: $text_hover !important;   
+		}
+	}
+}
+
+
+// when used (1/14*1140)
+//#{$name} .site-footer{
+//width: 81.42em;
+//margin: 1.5em auto;
+//border: 0.071em solid green !important;
+//background: white;
+//text-align: center;
+//}
+
+
+////////////////////////////////////////////////////////////
+// Sidebar
+////////////////////////////////////////////////////////////
+#{$name} .sidebar {
+	.widget {
+		background: #fff url(images/widget-heading.png) no-repeat center 25px; 
+	} 
+	// Widget title - Categories and Tags
+	.widgettitle{
+		color: $text_dark !important; 
+		&:hover {
+			color: $text_hover!important;
+		}
+	}
+	// Sidebar Featured Page Widgets Titles
+	.widget-wrap {
+		.entry-title {
+			a {
+				color: $text_dark !important; 
+				&:hover {
+					color: $text_hover!important;
+				}
+			}
+		}
+	}
+}
+////////////////////////////////////////////////////////////
+/*   Speciality Colors  */
+////////////////////////////////////////////////////////////
+// Change Title color per Category 
+//   For Katie web site*/
+//#{$name} .post.category-sarah .entry-title a{
+//	color: yellow;  
+//	background-color: $bg_dark;
+//	&:hover {
+//	  color: $text_hover;
+//	}
+//}
+//#{$name} .post.category-katie .entry-title a{
+//	color: $text_dark;    
+//	background-color: $bg_light;
+//	&:hover {
+//	  color: $text_hover;
+//	}
+//}
+////////////////////////////////////////////////////////////
+/*   Testing  */
+////////////////////////////////////////////////////////////
+//#{$name} .site-header .wrap {}
+
+//@include testing();
+
+
+// start code
+//#{$name} .classname {
+//		color: $colorname; 
+//  &:link {}
+//  &:visited {}
+//  &:focus {}
+//	&:hover {}
+//  &:active {}
+//	}
+
+//a:hover MUST come after a:link and a:visited
+//a:active MUST come after a:hover

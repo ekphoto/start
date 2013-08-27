@@ -1,0 +1,33 @@
+///////////////////////////////////////////////////////////////	
+// Calculate Colors $name, $primary, $hover
+// Base Colors
+///////////////////////////////////////////////////////////////	
+	
+$text_light:desaturate(lighten($primary, 55%), 20%);
+$text_medium:lighten($primary, 15%);
+$text_dark:$primary;
+
+$text_black:black;
+$text_white:white;
+$text_hover:$hover;
+
+$bg_light:desaturate(lighten($primary, 55%), 20%);
+$bg_medium:lighten($primary, 15%);
+$bg_dark:$primary;
+
+$bg_black:black;
+$bg_white:white;
+$bg_hover:$hover;
+
+$bg_footer:desaturate(lighten($primary, 58%), 40%);
+$author:desaturate(lighten($primary, 45%), 75%);
+$comntlight:desaturate(lighten($primary, 58%), 35%);
+$comntdark:desaturate(lighten($primary, 50%), 40%);
+$shadcolor:desaturate(lighten($primary, 28%), 80%);
+$line:desaturate(lighten($primary, 40%), 50%);
+
+
+$menulight:lighten($primary, 30%);
+$menudark:darken($primary, 15%);
+
+

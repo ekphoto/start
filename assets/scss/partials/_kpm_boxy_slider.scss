@@ -1,0 +1,357 @@
+/* ------------------------------------------------------------------------------------------------- */
+/*  Kelley ProMedia Custom Changes To Genesis Style Sheet                                            */	
+/*-------------------------------------- Custom Code ------------------------------------------------*/
+
+// Set Font Sizes
+$newFontPct: 100;  // New Font Percentage
+@import "partials/fontsize";
+
+
+
+.entry-title {
+	font-weight:100;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-bottom: 8px;
+	margin-bottom: .8rem;
+}
+
+.site-header .wrap {
+	width: $pagewidth;
+	padding: $padtop $padright $padbottom $padleft;
+}
+
+
+.site-title {
+/*	width: 400px;  /*        can cause problems with Responsive Themes less then 400 px */
+	font-weight: 100;
+	padding-top: 16px;
+	padding-top: 1.6rem;
+	font-family: 'Great Vibes', cursive;
+	text-shadow: 4px 4px 4px #ccdecb;
+	text-transform: none; 
+}
+.site-description {
+	font-family: Tahoma, Arial, sans-serif;
+	font-weight: 100;
+	margin: -1% 0 0 6%;
+}
+.title-area {
+	width: 48%;
+}
+.site-header .widget-area {
+	float: right;
+	text-align: right;
+	width: 48%;
+	@include line-height(1);
+}
+.site-header .simple-menu-icons { 
+	margin-top: 40px;				
+}
+.genesis-nav-menu {
+	letter-spacing: 1px;
+	letter-spacing: 0.1rem;
+	margin: 0px auto 0px;
+	overflow: hidden;
+	width: $pagewidth;   
+	border-radius: 4px;
+}
+.genesis-nav-menu .menu-item {
+	margin: 0;
+	padding: 0;
+}
+.genesis-nav-menu a {
+	padding: 6px 24px;
+	padding: 0.6rem 2.4rem;
+}
+.genesis-nav-menu .sub-menu a {
+	margin: 0px;
+	padding: 10px 20px;
+	padding: 1rem 2rem;
+}
+.genesis-nav-menu .sub-menu .sub-menu {
+	margin-top: -43px;
+}
+.site-inner {
+	padding-top: 10px;
+	padding-top: 1rem;
+}
+.archive-description,
+.author-box {
+	margin-bottom: 10px;
+	margin-bottom: 1rem;
+	padding: 10px 20px 30px 20px;
+	padding: 1rem 2rem 3rem 2rem;
+	text-shadow: none; 
+	font-weight: 100;
+}
+.archive-description {
+	margin-bottom: 40px;
+	margin-bottom: 4rem;
+}
+.entry {
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+	padding: 10px 20px 0px 20px;
+	padding: 1rem 2rem 0rem 2rem;
+}
+.entry-content ol,
+.entry-content ul {
+	margin-left: 20px;
+	margin-left: 2rem; 
+}
+.entry-content{
+	font-weight: 100;
+	text-shadow: none;
+}
+.entry-meta {
+	clear: both;
+	font-weight: 100;
+	text-shadow: none;
+	margin: 0 0 30px;
+	margin: 0 0 3rem;
+	padding: 4px 0 4px;
+	padding: .4rem 0 .4rem;
+	text-transform: uppercase
+}
+.entry-header .entry-meta {
+	margin-bottom: 12px;
+	margin-bottom: 1.2rem;
+}
+.entry-footer .entry-meta {
+	margin-bottom: 0;
+	margin: 0;
+	padding-top: 12px;
+	padding-top: 1.2rem;
+}
+.entry-comments {
+	padding: 0; 
+}
+.comment-list ul {
+	margin: 0;
+	padding: 0;
+	padding-right: 32px;
+}
+.cluv {
+	border: none !important;
+	padding: 4px;
+}
+.comment-list li {
+	margin-top: 12px;
+	margin-top: 1.2rem;
+	padding: 6px 0 10px 12px;
+	padding: .6rem 0 1.0rem 1.2rem;
+}
+
+.sidebar li {
+	padding: 0;
+}
+.sidebar .widget {
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+	padding: 56px 26px 10px;
+}
+
+
+
+////////////////////////////////////////////////////////////
+//  @include testing();
+//  @include containerTesting();
+////////////////////////////////////////////////////////////
+@include setMyWidth($pagewidth);
+//@include contentSidebarSidebarLayout(); // Content-Sidebar Sidebar
+//@include CSSLayoutP($pageWide, $contentPercent, $sidebarPercent, $secondaryPercent, $padPercent ); 
+
+@include CSSLayoutP($pageWide, $cssContentPercent, $cssSidebarPercent, $cssSecondaryPercent, $cssPadPercent);
+//@include CSSLayoutP($pageWide, 50, 25, 25, 1.5);
+
+@include contentSidebarLayout($pageWide, $contentPercent, $sidebarPercent, $padPercent );
+
+
+////////////////////////////////////////////////////////////////
+/* Footer Widgets */
+////////////////////////////////////////////////////////////////
+.footer-widgets {
+	width: $pagewidth;
+	margin: 10px auto 0px;
+	@include line-height(1.5);
+	overflow: hidden;
+	padding: 0.5% 0.5% 0.5% 0.5%;
+}
+.footer-widgets-1 {
+	margin-right: 1.8%;
+}
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+	width: 32.2%;
+}
+.site-footer {
+	padding: 1.0% 0;
+	margin-top: 5px;
+}
+
+
+	
+////////////////////////////////////////////////////////////////
+/* KPM Awebber form move up to image remove bottom margin */
+////////////////////////////////////////////////////////////////
+.awebup {
+	margin: 0 auto -30px;
+}
+.more-link {
+	display: block;
+	width: 25%;
+	height: auto;
+	padding: 1.5% 1% 2% 1%;
+	margin: 2% 0 0 0;
+	text-align: center;
+	border-radius: 3px;	
+}
+.widget .widget-wrap .entry-title,
+.widgettitle {
+	letter-spacing: 1px;
+	letter-spacing: 0.1rem;
+	margin-bottom: 10px;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+.widget .widget-wrap .entry {
+	padding: 0px 6px 10px;
+}
+.entry-header h1{
+	margin-bottom: 3px;
+	margin-bottom: .3rem;
+}
+.site-header .widget-area .genesis-nav-menu a {
+	margin: 5px;
+	padding: 0;
+}
+/* Turn Off Mobil Menu Till Needed */	
+.mobile_menu {
+	display: none;
+}
+/* do not display comments html tags */
+.form-allowed-tags {
+	display: none;
+}
+////////////////////////////////////////////////////////////////
+/* Featured Bottom */
+////////////////////////////////////////////////////////////////
+.featured-bottom p {
+	@include line-height(2);
+	text-align:left;
+}
+.featured-bottom {
+	width: 100%;
+	text-align:center;
+}
+.featured-bottom-left,
+.featured-bottom-middle,
+.featured-bottom-right  {
+	float: left;
+	width: 33.3%;
+}
+.featured-bottom-left,
+.featured-bottom-middle,
+.featured-bottom-right {
+	padding: 1% 1%;
+}
+.featured-bottom .more-link,
+.featured-bottom .more-link:hover {
+	width: auto;
+	height: auto;
+	text-align: left;
+	display:inline;
+}
+.featured-bottom .entry-title {
+	display: block;	
+	width: auto;
+	height: auto;
+	padding: 1% 1% 2% 1%;
+	margin: 2% 20%;
+	text-align: center;
+	border-radius: 3px;	
+}
+////////////////////////////////////////////////////////////////
+/* Genesis Responsive Slider */
+////////////////////////////////////////////////////////////////
+#genesis-responsive-slider { 
+	border: none !important;	
+	padding: 0 !important;
+}
+.flex-direction-nav li .prev,
+.flex-direction-nav li .prev:hover {
+	left: 0 !important;
+}
+.flex-direction-nav li .next,
+.flex-direction-nav li .next:hover{
+	right: 0 !important;
+}
+////////////////////////////////////////////////////////////////
+/* Block for Code Snippets using pre tag */
+////////////////////////////////////////////////////////////////
+pre {
+	border-radius: 3px;
+	font-family: Consolas, 'Liberation Mono', Courier, monospace;
+	font-weight: normal;
+	font-style: normal;
+	@include line-height(1.2);
+	margin: -22px 0 18px 0;
+	overflow: auto;
+	padding: 0 0 0 12px;
+	position: relative;
+	text-align: left;
+	text-shadow: none;
+	white-space: pre-wrap;
+}
+////////////////////////////////////////////////////////////////
+/* Navigation */
+////////////////////////////////////////////////////////////////
+.archive-navigation:before {
+	content: " ";
+	display: table;
+}
+.archive-navigation:after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+////////////////////////////////////////////////////////////////
+/* Pagination */
+////////////////////////////////////////////////////////////////
+.archive-navigation,
+.archive-pagination {
+	font-weight: 100;
+	text-shadow: none;
+	margin: 40px 0;
+	margin: 4rem 0;
+}
+.archive-navigation li,
+.archive-pagination li {
+	display: inline;
+}
+.archive-navigation li a,
+.archive-pagination li a {
+	cursor: pointer;
+	display: inline-block;
+	padding: 8px 12px;
+	padding: 0.8rem 1.2rem;
+}
+/////////////////////////////////////////////////////////////////
+/* PayPal Button */
+/////////////////////////////////////////////////////////////////
+input[type=image] {
+	width:auto;
+	border: none;
+}
+
+
+
+/////////////////////////////////////////////////////////////////
+/* Sub Menu Width */
+/////////////////////////////////////////////////////////////////
+
+@include setSubWidth($pageWide, $subMenuWidthPct, $mediaSize);
+
+
+/////////////////////////////////////////////////////////////////

@@ -1,0 +1,47 @@
+@import "partials/mixins";
+@import "partials/variables";
+// Compass imports
+//@import "compass";
+//@import "compass/css3";
+/////////////////////////////////////////////////////////////////////////////////////
+//@import "compass/reset";
+//////////////////////////////////////////////////////////////////////////////////////
+
+@function menuWide($mwPageWidth, $mwSubPct) {
+	@return ($mwPageWidth * $mwSubPct / 100)
+}
+@function menuHeight($mhPageWidth, $mhMediaSize) {
+	@return ($mhMediaSize / $mhPageWidth * -43) 
+}
+
+// newpage / $pageWide * 43 * -1
+
+
+@mixin setSubWidth($smwPageWidth:1140, $smwSubPct:17.5, $newMediaSize: 1140){
+	.genesis-nav-menu .sub-menu,
+	.genesis-nav-menu .sub-menu a  {
+		width: menuWide($newMediaSize, $smwSubPct) +px;	
+	}
+	.genesis-nav-menu .sub-menu .sub-menu {
+		$subMenuWide: menuWide($smwPageWidth, $smwSubPct) +px;
+		$subMenuHeight: menuHeight($smwPageWidth, $newMediaSize) +px;
+		margin: $subMenuHeight 0 0 $subMenuWide;
+		//margin: -43px 0 0 $subMenuWide;
+	}
+	.myTest {
+		width: $smwPageWidth;
+		width: $smwSubPct;
+		width: $newMediaSize;
+		
+		width: menuWide($newMediaSize, $smwSubPct) +px;	
+		width: menuWide($newMediaSize, $smwSubPct) +px;
+		width: menuHeight($smwPageWidth, $newMediaSize) +px;
+		//width: $subMenuHeight;
+		//width: $subMenuWide;
+	}
+}
+//@include setSubWidth($pageWide, $subMenuWidthPct, $newMediaSize);
+//@include setSubWidth($pageWide, $subMenuWidthPct, $myiPadL);
+
+
+

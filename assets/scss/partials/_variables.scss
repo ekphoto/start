@@ -1,0 +1,43 @@
+// Font Face
+
+// @include fontface('FONT_NAME', 'assets/fonts/', 'FONT_FAMILY');
+
+// Structure
+$pageWide: 1140;
+$pagewidth: 1140px;  	// Causes problems in SCSS if I use $pageWide +px ????
+$mediaSize: $pageWide; 	// Default media size
+
+$padtop: 	.5%;
+$padright:	.5%; 
+$padbottom:	.5%;
+$padleft:	1%;
+
+//$defaultFontSize: 10;
+
+$iPadL: 	1008px; //  8px padding both sides
+$iPadP: 	752px;	//  8px padding both sides
+$iPhoneL: 	460px;
+$iPhoneP: 	300px;
+
+$myiPadL: 	1008; 	
+$myiPadP: 	752;	
+$myiPhoneL:	460;
+$myiPhoneP:	300;
+
+
+// Defaults for Content Sidebar - should equal 100 don't add pad
+$padPercent: 1.5;
+$contentPercent: 70;
+$sidebarPercent: 30;
+
+// Defaults for Content Sidebar Sidebar - should equal 100 don't add pad
+$cssPadPercent: 1.5;
+$cssContentPercent: 50;
+$cssSidebarPercent: 25;
+$cssSecondaryPercent: 25;
+
+$subMenuWidthPct: 17.5;   // Submenu Width %(200/1140)
+$subMenuHeightPx: -43;  // Submenu Placement px
+
+
+

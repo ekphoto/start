@@ -1,0 +1,97 @@
+body .gform_heading h1{
+	color: white;
+}
+
+body .gform_heading {
+
+	@include boxwithshadow();
+	padding: 20px;
+	color: white;
+
+////http://lea.verou.me/css3patterns/
+////Carbon fibre
+//	background:
+//		radial-gradient(black 15%, transparent 16%) 0 0,
+//		radial-gradient(black 15%, transparent 16%) 8px 8px,
+//		radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+//		radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+//		//background-color:#282828;
+//		background-color: darken($bg_dark, 45%);
+//		background-size:16px 16px;
+//	
+////Blueprint grid
+//	background-color:#269;
+//		background-image: linear-gradient(white 2px, transparent 2px),
+//		linear-gradient(90deg, white 2px, transparent 2px),
+//		linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+//		linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+//		background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+//		background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+//	
+////Hearts
+//	background: 
+//		radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+//		radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+//		radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+//		radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+//		radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+//		
+//		radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+//		radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+//		radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+//		radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+//		radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+//		background-color:#b03;
+//		background-size:100px 100px;
+//
+////Carbon
+//	background:
+//		linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+//		linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+//		linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+//		linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+//		linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+//		linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+//		background-color: #131313;
+//		background-size: 20px 20px;
+//
+//	Stars	
+//	background:
+//		linear-gradient(324deg, #232927 4%,   transparent 4%) -70px 43px,
+//		linear-gradient( 36deg, #232927 4%,   transparent 4%) 30px 43px,
+//		linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 30px 43px,
+//		linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -70px 43px,
+//		linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -70px 23px,
+//		linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 30px 23px,
+//		
+//		linear-gradient(324deg, #232927 4%,   transparent 4%) -20px 93px,
+//		linear-gradient( 36deg, #232927 4%,   transparent 4%) 80px 93px,
+//		linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 80px 93px,
+//		linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -20px 93px,
+//		linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -20px 73px,
+//		linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 80px 73px;
+//		background-color: #232927;
+//		background-size: 100px 100px;	
+//
+////Polka dot
+//	background-color:#001;
+//	background-color:$bg_dark;
+//	background-image: radial-gradient(white 15%, transparent 16%),
+//	radial-gradient(white 15%, transparent 16%);
+//	background-size:60px 60px;
+//	background-position: 0 0, 30px 30px;
+//	
+
+}
+
+body .gform_wrapper .gform_body {
+	//border:10px solid red;
+	@include background((),
+		linear-gradient(top, white, $menulight));
+	padding: 20px;
+	@include boxwithshadow();
+		background: url(images/bgtest.jpg) no-repeat left;
+		background-repeat: no-repeat;
+		
+}
+

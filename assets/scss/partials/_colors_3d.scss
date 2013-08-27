@@ -1,0 +1,128 @@
+/////////////////////////////////////////////////////////////////////
+/*   Create 3D Color Styles   */
+/////////////////////////////////////////////////////////////////////
+//@include testing();
+//#{$name} .site-header .wrap,
+
+////////////////////////////////////////////////////////////
+/*  3D Menu   */
+////////////////////////////////////////////////////////////
+#{$name} .genesis-nav-menu,
+#{$name} .menu li li a:hover,
+#{$name} .menu li li a:active { 
+  background-color: $bg_dark;
+  @include background((),
+    linear-gradient(top, $menulight ,$menudark));
+}
+
+#{$name} .genesis-nav-menu .current-menu-item > a {
+	color: $text_light !important; 
+	background-color: $bg_light;
+	@include background((),
+		linear-gradient(top, $menudark, $menulight));
+}
+////////////////////////////////////////////////////////////
+/*  3D More Link  */
+////////////////////////////////////////////////////////////
+#{$name} .more-link { 
+	@include background((),
+	linear-gradient(top, $menulight ,$menudark));
+	&:hover {
+		@include background((),
+		linear-gradient(top, $bg_light ,$bg_light)); 
+	}
+}	
+////////////////////////////////////////////////////////////
+/*  3D Featured Bottom */
+////////////////////////////////////////////////////////////
+#{$name} .featured-bottom .entry-title { 
+  background-color: $bg_dark;
+  @include background((),
+    linear-gradient(top, $menulight ,$menudark));
+}	
+#{$name} .featured-bottom .entry-title:hover {
+  color: $text_black !important;
+  background-color: $bg_light;
+  @include background((),
+    linear-gradient(top, $menudark, $menulight));
+}
+////////////////////////////////////////////////////////////
+/*  3D Comments */
+////////////////////////////////////////////////////////////
+#{$name} .author-box {
+  background-color: $author; 
+  @include background((),
+    linear-gradient(top, $author, lighten($author, 10%)));
+}
+#{$name} .comment-list .depth-1,
+#{$name} li.comment .odd {
+  background-color: $comntdark;
+  @include background((),
+    linear-gradient(top, $comntdark, lighten($comntdark, 10%)));
+}
+#{$name} li.comment .even {
+ background-color: $comntlight;
+  @include background((),
+    linear-gradient(top, $comntlight, lighten($comntlight, 10%)));
+}
+////////////////////////////////////////////////////////////
+/*  3D Leave a Reply Box */
+////////////////////////////////////////////////////////////
+// Leave a reply and comment Luv
+#{$name} #respond.comment-respond {
+	background-color: $bg_light;
+  @include background((),
+    linear-gradient(top, $bg_light ,lighten($bg_light, 10%)));
+}
+#{$name} input[type="submit"],
+#{$name} input:hover[type="submit"] { 
+  background-color: $bg_dark;
+  @include background((),
+    linear-gradient(top, $menulight ,$menudark));
+}
+////////////////////////////////////////////////////////////
+/*  3D Archive Navigation */
+////////////////////////////////////////////////////////////
+#{$name} .archive-pagination li a,
+#{$name} .archive-navigation li a { 
+  background-color: $bg_dark;
+  @include background((),
+    linear-gradient(top, $menulight ,$menudark));
+}
+////////////////////////////////////////////////////////////
+/*  3D Footer */
+////////////////////////////////////////////////////////////
+#{$name} .footer-widgets {
+  background-color: $bg_footer; 
+  @include background((),
+    linear-gradient(top, $bg_footer, darken($bg_footer, 8%)));
+}
+////////////////////////////////////////////////////////////
+/*  Reset Items */
+////////////////////////////////////////////////////////////
+#{$name} .featured-bottom .more-link {
+	border: none !important;
+	text-decoration: none;
+	color: $text_black !important;
+	@include background((),
+		linear-gradient(top, $bg_white ,$bg_white));
+	&:hover {
+		@include background((),
+			linear-gradient(top, $bg_white ,$bg_white));
+			color: $text_medium !important
+	}
+}
+// Remove from Sidebar Featured Page /////////////////////////////////
+#{$name} .featured-bottom .entry,
+#{$name} .sidebar .entry{
+  border: 3px solid #fff;
+  -webkit-box-shadow: #fff 0px 0px 6px !important;
+  -moz-box-shadow: #fff 0px 0px 6px !important;
+  box-shadow: #fff 0px 0px 6px !important;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+

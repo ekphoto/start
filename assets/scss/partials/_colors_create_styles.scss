@@ -1,0 +1,17 @@
+///////////////////////////////////////////////////////////////////////////////////////////
+//  This creates the color styles
+//
+//  Called from _colors.scss
+///////////////////////////////////////////////////////////////////////////////////////////
+$tempname: $name;
+$name: ".kpm-" + $tempname;
+
+@import "partials/colors_calculate_base"; 	// Calculate Colors
+@import "partials/colors_display";  		// Calculate Colors For Web Page Display
+@import "partials/_colors_base"; 			// Create the base color styles 
+
+$name: ".kpm-td" + $tempname;
+@import "partials/colors_display";  		// Calculate 3D Colors For Web Page Display
+@import "partials/_colors_base"; 			// Create the 3D base color styles 
+@import "partials/colors_3d"; 				// Create the 3D boxy color styles
+///////////////////////////////////////////////////////////////////////////////////////////
