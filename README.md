@@ -7,7 +7,7 @@ Version: 2.6
 
 
 
-Ed Kelley ( [@kelleypromedia] http://kelleypromedia.com) / [@edkelleyphotography](http://www.edkelleyphotography.com) / [mattbanks.me](http://www.mattbanks.me) )
+Ed Kelley ( [@kelleypromedia] http://kelleypromedia.com) / [@edkelleyphotography](http://www.edkelleyphotography.com)
 
 
 
