@@ -80,6 +80,7 @@ function child_theme_setup() {
 	// Image Sizes
 	// add_image_size( $name, $width = 0, $height = 0, $crop = false );
 	add_image_size( 'slider-image', 1140, 450, TRUE );
+	add_image_size( 'price-thumbnail', 250, 250, TRUE );
 
 	// Clean up Head
 	remove_action('wp_head', 'rsd_link');
@@ -104,6 +105,13 @@ function child_theme_setup() {
 	genesis_register_sidebar( array( 'name'	=> 'Featured Bottom Left', 'id'=> 'featured-bottom-left') );
 	genesis_register_sidebar( array( 'name'	=> 'Featured Bottom Middle', 'id'=> 'featured-bottom-middle') );
 	genesis_register_sidebar( array( 'name'	=> 'Featured Bottom Right', 'id'=> 'featured-bottom-right') );
+	
+	genesis_register_sidebar( array( 'name'	=> 'Featured Price Header', 'id'=> 'price_header') );
+	genesis_register_sidebar( array( 'name'	=> 'Featured Price One', 'id'=> 'price_one') );
+	genesis_register_sidebar( array( 'name'	=> 'Featured Price Two', 'id'=> 'price_two') );
+	genesis_register_sidebar( array( 'name'	=> 'Featured Price Three', 'id'=> 'price_three') );
+	genesis_register_sidebar( array( 'name'	=> 'Featured Price Four', 'id'=> 'price_four') );
+	genesis_register_sidebar( array( 'name'	=> 'Featured Price Footer', 'id'=> 'price_footer') );
 	
 	add_theme_support( 'genesis-footer-widgets', 3 );
 	
@@ -141,7 +149,7 @@ function child_theme_setup() {
 	add_filter( 'http_request_args', 'mb_dont_update_theme', 5, 2 );
 
 	// Setup Child Theme Settings
-//	include_once( CHILD_DIR . '/lib/child-theme-settings.php' );
+	include_once( CHILD_DIR . '/lib/child-theme-settings.php' );
 
 	// Prevent File Modifications
 	define ( 'DISALLOW_FILE_EDIT', true );
@@ -201,9 +209,7 @@ function child_theme_setup() {
 	// Footer
 	remove_action( 'genesis_footer', 'genesis_do_footer' );
 	add_action( 'genesis_footer', 'kpm_footer' );
-	//add_filter( 'genesis_footer_creds_text', 'kpm_footer' );
-
-
+	
 	// Enqueue Scripts
 	//add_action( 'wp_enqueue_scripts', 'mb_scripts' );
 	// Causes Errors and slows down slider!!!!!!!!!
@@ -221,6 +227,9 @@ function child_theme_setup() {
 	*****************************************/
 
 	include_once( CHILD_DIR . '/lib/theme-views.php' );
+	
+
+	
 
 
 	/****************************************

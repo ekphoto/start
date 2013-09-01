@@ -5,6 +5,11 @@
 ////////////////////////////////////////////////////////////
 /*  Build Box with Shadow  */
 ////////////////////////////////////////////////////////////
+#{$name} .price_one,
+#{$name} .price_two,
+#{$name} .price_three,
+#{$name} .price_four,
+//#{$name} .site-inner,
 #{$name} .entry,
 #{$name} .archive-description,
 #{$name} .entry-comments,
@@ -33,9 +38,13 @@ $bg_background: $bg_white;
 
 /* /////////////////////////////////////////////////////// */
 
+#{$name} .site-inner {
+	margin-top: 10px;
+	}
 
 #{$name} .site-container {
-background-color: $bg_background !important;
+//background-color: $bg_background !important;    // will defeat Genesis Custom Backgrounds
+//background: url(images/bg.png) no-repeat left !important;
 }
 
 //#{$name} body {
@@ -134,6 +143,14 @@ background-color: $bg_background !important;
 		&:active {}
 	}
 } 
+
+
+////////////////////////////////////////////////////////////
+/*   Site Inner */
+////////////////////////////////////////////////////////////
+#{$name} .site-inner {
+	background-color: white;
+}
 ////////////////////////////////////////////////////////////
 /*   More Link  */
 ////////////////////////////////////////////////////////////
@@ -365,6 +382,40 @@ background-color: $bg_background !important;
 		}
 	}
 }
+
+
+////////////////////////////////////////////////////////////
+/*   Featured Price Page layout */
+////////////////////////////////////////////////////////////
+
+#{$name} .featured-price .entry-title {
+	background-color: $bg_dark;
+	color: $text_white;
+}
+
+#{$name} .featured-price .entry-title a{
+	color: $text_white;
+	text-shadow: none;
+}
+#{$name} .featured-price .entry-title a:hover{
+	color: $text_hover;
+}
+
+#{$name} .featured-price .widgettitle {
+	background-color: $bg_dark;
+	color: $text_white;
+	padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////
 /*   Speciality Colors  */
 ////////////////////////////////////////////////////////////

@@ -172,22 +172,10 @@ function mb_apple_touch_icon() {
 /**
  * Footer
  */
-function mb_footer() {
-	echo '<div class="one-half first" id="footer-left">' . wpautop( genesis_get_option( 'footer-left', 'child-settings' ) ) . '</div>';
-	echo '<div class="one-half" id="footer-right">' . wpautop( genesis_get_option( 'footer-right', 'child-settings' ) ) . '</div>';
-}
-
 //function mb_footer() {
 //	echo '<div class="one-half first" id="footer-left">' . wpautop( genesis_get_option( 'footer-left', 'child-settings' ) ) . '</div>';
-//	//echo '<div class="one-third" id="footer-right">' . wpautop( genesis_get_option( 'footer-center', 'child-settings' ) ) . '</div>';
 //	echo '<div class="one-half" id="footer-right">' . wpautop( genesis_get_option( 'footer-right', 'child-settings' ) ) . '</div>';
 //}
-
-//function mb_footer() {
-//	echo '<div class="creds">' . wpautop( genesis_get_option( 'footer-center', 'child-settings' ) ) . '</div>';
-//}
-
-
 
 /**
  * Enqueue Script
@@ -299,22 +287,26 @@ function kpm_mobile_before_content_widget() {
 /****************************************
 Custom Footer
 *****************************************/
+//function kpm_footer() {
+//	echo '<div class="creds"><p>';
+//	echo 'Copyright &copy; ';
+//	echo date('Y');
+//	if (CHILD_DISPLAY_URL){
+//		echo " &middot; <a href=".CHILD_SITE_URL.">".CHILD_THEME_NAME." </a>";
+//	}
+//	if (CHILD_DISPLAY_EMAIL) {
+//		echo "&middot; Contact: <a href=mailto:".CHILD_THEME_EMAIL.">" .CHILD_THEME_EMAIL."</a>";
+//	}
+//	if (CHILD_DISPLAY_PHONE) {
+//		echo "&middot; Phone: ".CHILD_THEME_PHONE;
+//	}
+//	echo "&middot; Site By: <a href=". CHILD_SITE_BY_URL . ">" .CHILD_SITE_BY."</a>";
+//	echo '</p> </div>';
+//}
+
 function kpm_footer() {
-	echo '<div class="creds"><p>';
-	echo 'Copyright &copy; ';
-	echo date('Y');
-	if (CHILD_DISPLAY_URL){
-		echo " &middot; <a href=".CHILD_SITE_URL.">".CHILD_THEME_NAME." </a>";
-	}
-	if (CHILD_DISPLAY_EMAIL) {
-		echo "&middot; Contact: <a href=mailto:".CHILD_THEME_EMAIL.">" .CHILD_THEME_EMAIL."</a>";
-	}
-	if (CHILD_DISPLAY_PHONE) {
-		echo "&middot; Phone: ".CHILD_THEME_PHONE;
-	}
-	echo "&middot; Site By: <a href=". CHILD_SITE_BY_URL . ">" .CHILD_SITE_BY."</a>";
-	echo '</p> </div>';
+	echo '<div class="one-half first" id="footer-left">' . wpautop( genesis_get_option( 'footer-left', 'child-settings' ) ) . '</div>';
+	echo '<div class="creds">' . wpautop( genesis_get_option( 'footer-center', 'child-settings' ) ) . '</div>';
+	echo '<div class="one-half" id="footer-right">' . wpautop( genesis_get_option( 'footer-right', 'child-settings' ) ) . '</div>';
 }
 
-//echo "&middot; Site By: <a href=". CHILD_SITE_BY_URL target="_blank" . ">" .CHILD_SITE_BY."</a>";
-//<a href="http://1" target="_blank"></a>

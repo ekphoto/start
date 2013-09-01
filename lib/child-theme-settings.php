@@ -5,13 +5,13 @@
  * This file registers all of this child theme's specific Theme Settings, accessible from
  * Genesis > Child Theme Settings.
  *
- * @package     BE_Genesis_Child
+ * @package     KPM_Boxy_Slider
  * @since       1.0.0
- * @link        https://github.com/billerickson/BE-Genesis-Child
- * @author      Bill Erickson <bill@billerickson.net>
- * @copyright   Copyright (c) 2011, Bill Erickson
+ * @link        https:/kelleypromedia.com
+ * @author      Ed Kelley <ed@kelleypromedia.com>
+ * @copyright   Copyright (c) 2013, Ed Kelley
  * @license     http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
- * @link        https://github.com/billerickson/BE-Genesis-Child
+ * @link        https:/kelleypromedia.com
  */
 
 /**
@@ -20,7 +20,7 @@
  *
  * @since 1.0.0
  *
- * @package BE_Genesis_Child
+ * @package kpm
  * @subpackage Child_Theme_Settings
  */
 class Child_Theme_Settings extends Genesis_Admin_Boxes {
@@ -38,7 +38,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		$menu_ops = array(
 			'submenu' => array(
 				'parent_slug' => 'genesis',
-				'page_title'  => 'Genesis - Child Theme Settings',
+				'page_title'  => 'KPM Boxy Slider Settings',
 				'menu_title'  => 'Child Theme Settings',
 			)
 		);
@@ -57,9 +57,16 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 		$settings_field = 'child-settings';
 
 		// Set the default values
-		$default_settings = array(
-			'footer-left'   => 'Copyright &copy; ' . date( 'Y' ) . ' All Rights Reserved',
-			'footer-right' => 'Site by <a href="http://www.kelleypromedia.com">Kelley ProMedia</a>',
+			$default_settings = array(
+				// Center Footer
+				'footer-left'   => '',
+				'footer-center'   => 'Copyright &copy; ' . date( 'Y' ) . ' All Rights Reserved ' . '· Contact: <a href="mailto:kelley@kelleypromedia.com"> 					kelley@kelleypromedia.com</a>  ' . '· Site by <a href="http://www.kelleypromedia.com">Kelley ProMedia</a>',
+				'footer-right' => '',
+				
+				// Left Right Footer
+				//'footer-left'   => 'Copyright &copy; ' . date( 'Y' ) . ' All Rights Reserved',
+				//'footer-center'   => ''
+				//'footer-right' => 'Site by <a href="http://www.kelleypromedia.com">Kelley ProMedia</a>',
 		);
 
 		// Create the Admin Page
@@ -109,7 +116,7 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	function metaboxes() {
 
-	//	add_meta_box('footer_metabox', 'Footer', array( $this, 'footer_metabox' ), $this->pagehook, 'main', 'high');
+		add_meta_box('footer_metabox', 'Footer', array( $this, 'footer_metabox' ), $this->pagehook, 'main', 'high');
 
 	}
 
@@ -122,8 +129,8 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
 	echo '<p><strong>Footer Left:</strong></p>';
 	wp_editor( $this->get_field_value( 'footer-left' ), $this->get_field_id( 'footer-left' ), array( 'textarea_rows' => 5 ) );
 	
-//	echo '<p><strong>Footer Center:</strong></p>';
-//	wp_editor( $this->get_field_value( 'footer-center' ), $this->get_field_id( 'footer-center' ), array( 'textarea_rows' => 5 ) );
+	echo '<p><strong>Footer Center:</strong></p>';
+	wp_editor( $this->get_field_value( 'footer-center' ), $this->get_field_id( 'footer-center' ), array( 'textarea_rows' => 5 ) );
 
 	echo '<p><strong>Footer Right:</strong></p>';
 	wp_editor( $this->get_field_value( 'footer-right' ), $this->get_field_id( 'footer-right' ), array( 'textarea_rows' => 5 ) );

@@ -6,8 +6,6 @@
 $newFontPct: 100;  // New Font Percentage
 @import "partials/fontsize";
 
-
-
 .entry-title {
 	font-weight:100;
 	font-family:Tahoma, Geneva, sans-serif;
@@ -355,3 +353,99 @@ input[type=image] {
 
 
 /////////////////////////////////////////////////////////////////
+//body {
+// background: url(images/bg.png) no-repeat left !important;
+// }
+// 
+//.site-container {
+//background-color: none !important;
+// background: url(images/bg.png) no-repeat left !important;
+//}
+
+
+
+////////////////////////////////////////////////////////////////
+/* Featured Price Page Layout  */
+////////////////////////////////////////////////////////////////
+.featured-price p {
+	@include line-height(2);
+	text-align:left;
+}
+.featured-price {
+	width: 100%;
+	text-align:center;
+}
+.price_one,
+.price_two,
+.price_three,
+.price_four  {
+	float: left;
+	width: 25%;
+	padding: .5% .5%;
+}
+
+.featured-price .more-link,
+.featured-price .more-link:hover {
+	width: auto;
+	height: auto;
+	text-align: left;
+	display:inline;
+}
+.featured-price .entry-title {
+	display: block;	
+	width: auto;
+	height: auto;
+	margin: 5% 25%;	
+	padding: 2% 1% 2% 1%;
+	text-align: center;
+	border-radius: 4px;	
+	text-shadow: none;
+}
+
+
+
+
+.price_header {
+	float: left;
+	width: 100%;
+	margin-top: -30px;
+	margin-bottom: 0;
+}	
+.price_header img {
+	padding: 0;
+	margin-bottom: 0;
+}
+.price_header p {
+	padding: 0;
+	margin-bottom: 0;
+}
+
+
+
+
+.price_footer {
+	float: left;
+	width: 100%;
+	padding: 1% 2% 1% 1%;
+}	
+
+.featured-price .widgettitle {
+	padding-top: 10px;
+	margin: 0 0 5% 0;	
+	height: 40px;
+	font-weight: 100;
+}
+
+.price_one,
+.price_two,
+.price_three,
+.price_four  {
+ 	height: 830px;
+	margin-botton: 20px;
+	line-height: 1.0;
+}
+
+
+
+
+
